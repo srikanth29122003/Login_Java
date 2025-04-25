@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register here</title>
+<style type="text/css">
+*
+   {
+     margin:0px;
+     
+     padding:0px;
+   }
+   h1
+   {
+      text-align:center;
+      color :#1877F2;
+     position: relative;
+      top:60px;
+      
+      font-size:3rem;
+      
+      
+   }
+   body
+   {
+     
+   }
+   #details
+   {
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       border :  2px;
+       border-radius:10px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       height :300px;
+       width:400px;
+   }
+   p
+   {
+      font-size: 1.5rem;
+   }
+   .border
+   {
+      display:flex;
+      justify-content:center;
+      margin-top:100px;
+   }
+   form input
+   {
+      height:45px;
+      width: 380px;
+      border:solid 1px;
+      border-radius:5px;
+      font-size:1rem;
+   }
+   form button
+   {
+     height:45px;
+      width: 380px;
+      font-size:1.1rem;
+      background-color:#1877F2;
+      color:white;
+      border:solid 1px;
+      border-radius:5px;
+   }
+   h2
+   {
+     text-align:center;
+     margin-bottom:20px;
+     
+     font-weight: normal;
+   }
+
+</style>
+<script type="text/javascript">
+  function Register()
+  {
+   var usr= document.getElementById("username").value;
+   var pass= document.getElementById("password").value;
+   var conpass=document.getElementById("conpassword").value;
+   if(usr==""||pass==""||conpass=="")
+	   {
+	     alert("some filed is empty");
+	     return false;
+	   }
+   if(pass!=conpass)
+	   {
+	   alert("password ans confirm password is not same");
+	   return false;
+	   }
+  }
+ 
+</script>
+</head>
+<body>
+           <h1>facebook</h1>
+    <div class="border">
+     <div id="details">
+     <form action="AddUserDetails" onsubmit="return Register()" method="post">
+        <h2>Register in to facebook</h2>
+        <input type="text" id="username" placeholder="Email address or Phone number" name="n"> <br><br>
+        <input type="password" id="password" placeholder="password" name="p" > <br><br>
+        <input type="password" id="conpassword" placeholder="confirm password" name="cp"> <br><br>
+        <button>Register</button>
+        <div>
+        </div>
+     </form>
+     </div> 
+     </div>
+           
+</body>
+</html>

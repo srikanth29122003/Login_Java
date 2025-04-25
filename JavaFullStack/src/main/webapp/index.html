@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Form</title>
+<style type="text/css">
+   *
+   {
+     margin:0px;
+     
+     padding:0px;
+   }
+   h1
+   {
+      text-align:center;
+      color :#1877F2;
+     position: relative;
+      top:60px;
+      
+      font-size:3rem;
+      
+      
+   }
+   body
+   {
+     
+   }
+   #details
+   {
+       display:flex;
+       justify-content:center;
+       align-items:center;
+       border :  2px;
+       border-radius:10px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       height :300px;
+       width:400px;
+   }
+   p
+   {
+      font-size: 1.5rem;
+   }
+   .border
+   {
+      display:flex;
+      justify-content:center;
+      margin-top:100px;
+   }
+   form input
+   {
+      height:45px;
+      width: 380px;
+      border:solid 1px;
+      border-radius:5px;
+      font-size:1rem;
+   }
+   form button
+   {
+     height:45px;
+      width: 380px;
+      font-size:1.1rem;
+      background-color:#1877F2;
+      color:white;
+      border:solid 1px;
+      border-radius:5px;
+   }
+   h2
+   {
+     text-align:center;
+     margin-bottom:20px;
+     
+     font-weight: normal;
+   }
+   a
+   {
+     text-decoration:none;
+     padding:20px;
+     color:#1877F2;
+     margin-left:10px;
+    
+     
+   }
+</style>
+<script type="text/javascript">
+ function Login()
+ {
+    var usr=document.getElementById("username").value;
+    var pas=document.getElementById("password").value;
+    //alert("hello "+usr+" and your password is "+pas);
+    
+    if(usr=="")
+    	{
+    	  alert("user name is empty");
+    	  return false;
+    	}
+    if(pas=="")
+    	{
+    	  alert("password is empty");
+    	  return false;
+    	}
+ }
+ 
+</script>
+</head>
+<body>
+     <h1>facebook</h1>
+    <div class="border">
+     <div id="details">
+     <form  action="Validation" onsubmit="return Login()" method="get">
+        <h2>Log in to facebook</h2>
+        <input type="text" id="username" placeholder="Email address or Phone number" name="uname"> <br><br>
+        <input type="password" id="password" placeholder="password" name="pwd"> <br><br>
+        <button>Log in</button>
+        <div>
+        <a href="">Forgotten account</a>
+        <a href="Register.html">Sign up for facebook</a>
+        </div>
+     </form>
+     </div> 
+     </div>
+</body>
+</html>
